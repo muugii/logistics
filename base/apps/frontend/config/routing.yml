@@ -1,0 +1,49 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+
+
+# showMyCargo өөрийн account - руу орох шалгах
+showMyCargo:
+  url:   /membership
+  param: { module: membership, action: showMy }
+
+
+# signupForm шалгах
+login:
+  url:   /membership/login
+  param: { module: membership, action: login }
+
+# signupForm шалгах
+logout:
+  url:   /membership/logout
+  param: { module: membership, action: logout }
+  
+# шинээр бүртгүүлэх
+signup:
+  url:   /membership/signup
+  param: { module: membership, action: signup }
+
+# signupForm шалгах
+checkUsername:
+  url:   /membership/checkUsername
+  param: { module: membership, action: checkUsername }
+
+# signupForm шалгах
+checkForm:
+  url:   /membership/checkForm
+  param: { module: membership, action: checkForm }
+  
+# default rules
+homepage:
+  url:   /
+  param: { module: main, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
